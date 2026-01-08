@@ -1,0 +1,45 @@
+{
+    "event": {
+        "BootSequence": {
+            "gainMaxShield": "Gain 2 <c=keyword>max shield</c>",
+            "gainBossArtifactForNodes" : "Gain a boss arifact. All <c=artifact>artifact</c> map nodes are empty",
+            "gainUpgradedCommon": "Gain a random upgraded common card",
+            "LoseTwoHull": "<c=downside>Lose 2</c> <c=hull>hull</c>",
+            "GainSafetyOverride" : "<c=downside>Gain 1 non-temp <c=trash>Safety Override</c></c>",
+            "GainSystemFailure" : "<c=downside>Gain 1 <c=trash>System Failure</c></c>",
+            "GainFTLCanister" : "<c=downside>Gain 1 <c=trash>FTL Canister</c> every zone</c>",
+            "GainShieldShunt" : "<c=downside>Lose 1 <c=keyword>shield</c> on combat start</c>",
+            "RemoveAddCorrupted" : "<c=downside>Remove a card, then gain 1</c> <c=trash>Corrupted Core</c>",
+            "RemoveFirstArtifact" :  "<c=downside>The first <c=artifact>artifact</c> map node is empty</c>"
+        }
+    },
+    "artifact" : {
+        "NewBootOptionsFTLCasings" : {
+            "name" : "FTL SAFETY CANISTER",
+            "desc" : "<c=downside>Gain 1 <c=trash>FTL Canister</c> at the start of every zone.</c>"
+        },
+        "NewBootOptionsShieldShunt" : {
+            "name" : "SHIELD SHUNT",
+            "desc" : "<c=downside>Lose 1 <c=status>SHIELD</c> on the first turn of combat.</c>"
+        },
+        "NewBootOptionsRemoveFirstArtifact" : {
+            "name" : "ARTIFACT LOSS",
+            "desc" : "<c=downside>The first <c=artifact>artifact</c> map node is empty.</c>"
+        },
+        "NewBootOptionsRemoveAllArtifacts" : {
+            "name" : "ARTIFACT REMOVAL",
+            "desc" : "<c=downside>ALL <c=artifact>artifact</c> map nodes are empty.</c>"
+        },
+    },
+    "card" : {
+        "NewBootOptionsFTLCasingCard" : 
+        {
+            "name" : "FTL Canister",
+            "desc" : "<c=textFaint>The 'proper' way to dispose of FTL byproducts.</c>"
+        },
+        "NewBootOptionsSystemFailure" : 
+        {
+            "name" : "System Failure"
+        }
+    }
+}

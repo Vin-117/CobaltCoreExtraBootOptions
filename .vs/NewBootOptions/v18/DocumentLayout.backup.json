@@ -1,0 +1,68 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Mine2\\ExtraBootOptions\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D121F940-6EDA-82DD-4525-6084CFBA8C2B}|NewBootOptions.csproj|c:\\users\\conce\\onedrive\\desktop\\misc folders\\cobalt core mods\\mine2\\extrabootoptions\\artifacts\\removefirstartifact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D121F940-6EDA-82DD-4525-6084CFBA8C2B}|NewBootOptions.csproj|solutionrelative:artifacts\\removefirstartifact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Raw Game Code\\Events.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D121F940-6EDA-82DD-4525-6084CFBA8C2B}|NewBootOptions.csproj|c:\\users\\conce\\onedrive\\desktop\\misc folders\\cobalt core mods\\mine2\\extrabootoptions\\artifacts\\ftlcasings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D121F940-6EDA-82DD-4525-6084CFBA8C2B}|NewBootOptions.csproj|solutionrelative:artifacts\\ftlcasings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FTLCasings.cs",
+              "DocumentMoniker": "C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Mine2\\ExtraBootOptions\\Artifacts\\FTLCasings.cs",
+              "RelativeDocumentMoniker": "Artifacts\\FTLCasings.cs",
+              "ToolTip": "C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Mine2\\ExtraBootOptions\\Artifacts\\FTLCasings.cs",
+              "RelativeToolTip": "Artifacts\\FTLCasings.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-08T01:37:51.249Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Events.cs",
+              "DocumentMoniker": "C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Raw Game Code\\Events.cs",
+              "RelativeDocumentMoniker": "..\\..\\Raw Game Code\\Events.cs",
+              "ToolTip": "C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Raw Game Code\\Events.cs",
+              "RelativeToolTip": "..\\..\\Raw Game Code\\Events.cs",
+              "ViewState": "AgIAAKEAAAAAAAAAAAAUwLgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-08T01:05:55.55Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RemoveFirstArtifact.cs",
+              "DocumentMoniker": "C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Mine2\\ExtraBootOptions\\Artifacts\\RemoveFirstArtifact.cs",
+              "RelativeDocumentMoniker": "Artifacts\\RemoveFirstArtifact.cs",
+              "ToolTip": "C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Mine2\\ExtraBootOptions\\Artifacts\\RemoveFirstArtifact.cs",
+              "RelativeToolTip": "Artifacts\\RemoveFirstArtifact.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAD4v0MAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-07T03:03:50.72Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

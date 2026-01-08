@@ -1,0 +1,15 @@
+{
+    "UniqueName": "Vintage.NewBootOptions",
+    "DisplayName": "New Boot Options",
+    "Description": "Blah blah placeholder.",
+    "Version": "{{ModVersion}}",
+    "EntryPointAssembly": "NewBootOptions.dll",
+    "Dependencies": [
+        
+    ],
+    "UpdateChecks": {
+        // "NexusMods": {
+        //   "ID": 69
+        // }
+	}
+}
