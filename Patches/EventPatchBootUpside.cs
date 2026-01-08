@@ -83,7 +83,7 @@ public static class EventsPatchesBootUpside
             [   
                 (CardAction)new ACardOffering
                 {
-                    amount = 1,
+                    amount = 3,
                     rarityOverride = Rarity.common,
                     canSkip = false,
                     overrideUpgradeChances = true

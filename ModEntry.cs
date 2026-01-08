@@ -77,13 +77,13 @@ public sealed class ModEntry : SimpleMod {
 
         helper.ModRegistry.AwaitApi<ICustomRunOptionsApi>("Shockah.CustomRunOptions", api => api.RegisterBootSequenceUpside(
             "gainBossArtifactForNodes",
-            () => "Gain a boss arifact. All <c=artifact>artifact</c> map nodes are empty",
+            () => "Gain a boss arifact, remove all <c=artifact>artifact</c> node rewards",
             choice => choice is BootUpsideRemoveAllArtifactsForBossArtifact
         ));
 
         helper.ModRegistry.AwaitApi<ICustomRunOptionsApi>("Shockah.CustomRunOptions", api => api.RegisterBootSequenceUpside(
             "gainUpgradedCommon",
-            () => "Gain a random upgraded common card",
+            () => "Gain 1 of 3 upgraded common cards",
             choice => choice is BootUpsideUpgradedCommonCard
         ));
 

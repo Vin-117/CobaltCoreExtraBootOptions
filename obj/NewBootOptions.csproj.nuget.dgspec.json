@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Mine2\\ExtraBootOptions\\NewBootOptions.csproj": {}
+    "C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Mine\\ExtraBootOptions\\NewBootOptions.csproj": {}
   },
   "projects": {
-    "C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Mine2\\ExtraBootOptions\\NewBootOptions.csproj": {
-      "version": "0.1.0",
+    "C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Mine\\ExtraBootOptions\\NewBootOptions.csproj": {
+      "version": "0.8.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Mine2\\ExtraBootOptions\\NewBootOptions.csproj",
+        "projectUniqueName": "C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Mine\\ExtraBootOptions\\NewBootOptions.csproj",
         "projectName": "NewBootOptions",
-        "projectPath": "C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Mine2\\ExtraBootOptions\\NewBootOptions.csproj",
+        "projectPath": "C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Mine\\ExtraBootOptions\\NewBootOptions.csproj",
         "packagesPath": "C:\\Users\\conce\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Mine2\\ExtraBootOptions\\obj\\",
+        "outputPath": "C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Mine\\ExtraBootOptions\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\conce\\AppData\\Roaming\\NuGet\\NuGet.Config",

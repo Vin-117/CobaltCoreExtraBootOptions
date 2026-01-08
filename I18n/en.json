@@ -2,15 +2,15 @@
     "event": {
         "BootSequence": {
             "gainMaxShield": "Gain 2 <c=keyword>max shield</c>",
-            "gainBossArtifactForNodes" : "Gain a boss arifact. All <c=artifact>artifact</c> map nodes are empty",
-            "gainUpgradedCommon": "Gain a random upgraded common card",
+            "gainBossArtifactForNodes" : "Gain a boss arifact, remove all <c=artifact>artifact</c> node rewards",
+            "gainUpgradedCommon": "Gain 1 of 3 upgraded common cards",
             "LoseTwoHull": "<c=downside>Lose 2</c> <c=hull>hull</c>",
             "GainSafetyOverride" : "<c=downside>Gain 1 non-temp <c=trash>Safety Override</c></c>",
             "GainSystemFailure" : "<c=downside>Gain 1 <c=trash>System Failure</c></c>",
             "GainFTLCanister" : "<c=downside>Gain 1 <c=trash>FTL Canister</c> every zone</c>",
             "GainShieldShunt" : "<c=downside>Lose 1 <c=keyword>shield</c> on combat start</c>",
             "RemoveAddCorrupted" : "<c=downside>Remove a card, then gain 1</c> <c=trash>Corrupted Core</c>",
-            "RemoveFirstArtifact" :  "<c=downside>The first <c=artifact>artifact</c> map node is empty</c>"
+            "RemoveFirstArtifact" :  "<c=downside>The first <c=artifact>artifact</c> node is empty</c>"
         }
     },
     "artifact" : {
