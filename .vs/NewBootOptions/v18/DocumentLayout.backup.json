@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Mine\\ExtraBootOptions\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D121F940-6EDA-82DD-4525-6084CFBA8C2B}|NewBootOptions.csproj|c:\\users\\conce\\onedrive\\desktop\\misc folders\\cobalt core mods\\mine\\extrabootoptions\\features\\aspecificcardoffering.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D121F940-6EDA-82DD-4525-6084CFBA8C2B}|NewBootOptions.csproj|solutionrelative:features\\aspecificcardoffering.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D121F940-6EDA-82DD-4525-6084CFBA8C2B}|NewBootOptions.csproj|c:\\users\\conce\\onedrive\\desktop\\misc folders\\cobalt core mods\\mine\\extrabootoptions\\patches\\eventpatchbootupside.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D121F940-6EDA-82DD-4525-6084CFBA8C2B}|NewBootOptions.csproj|solutionrelative:patches\\eventpatchbootupside.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D121F940-6EDA-82DD-4525-6084CFBA8C2B}|NewBootOptions.csproj|c:\\users\\conce\\onedrive\\desktop\\misc folders\\cobalt core mods\\mine\\extrabootoptions\\modentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D121F940-6EDA-82DD-4525-6084CFBA8C2B}|NewBootOptions.csproj|solutionrelative:modentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D121F940-6EDA-82DD-4525-6084CFBA8C2B}|NewBootOptions.csproj|c:\\users\\conce\\onedrive\\desktop\\misc folders\\cobalt core mods\\mine\\extrabootoptions\\artifacts\\removeallartifacts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D121F940-6EDA-82DD-4525-6084CFBA8C2B}|NewBootOptions.csproj|solutionrelative:artifacts\\removeallartifacts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D121F940-6EDA-82DD-4525-6084CFBA8C2B}|NewBootOptions.csproj|c:\\users\\conce\\onedrive\\desktop\\misc folders\\cobalt core mods\\mine\\extrabootoptions\\i18n\\en.json||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{D121F940-6EDA-82DD-4525-6084CFBA8C2B}|NewBootOptions.csproj|solutionrelative:i18n\\en.json||{3B902123-F8A7-4915-9F01-361F908088D0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +26,58 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ASpecificCardOffering.cs",
-              "DocumentMoniker": "C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Mine\\ExtraBootOptions\\Features\\ASpecificCardOffering.cs",
-              "RelativeDocumentMoniker": "Features\\ASpecificCardOffering.cs",
-              "ToolTip": "C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Mine\\ExtraBootOptions\\Features\\ASpecificCardOffering.cs",
-              "RelativeToolTip": "Features\\ASpecificCardOffering.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAzwB0AAAAdAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "RemoveAllArtifacts.cs",
+              "DocumentMoniker": "C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Mine\\ExtraBootOptions\\Artifacts\\RemoveAllArtifacts.cs",
+              "RelativeDocumentMoniker": "Artifacts\\RemoveAllArtifacts.cs",
+              "ToolTip": "C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Mine\\ExtraBootOptions\\Artifacts\\RemoveAllArtifacts.cs",
+              "RelativeToolTip": "Artifacts\\RemoveAllArtifacts.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-11T00:15:44.441Z",
+              "WhenOpened": "2026-01-11T01:51:23.249Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "en.json",
+              "DocumentMoniker": "C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Mine\\ExtraBootOptions\\I18n\\en.json",
+              "RelativeDocumentMoniker": "I18n\\en.json",
+              "ToolTip": "C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Mine\\ExtraBootOptions\\I18n\\en.json",
+              "RelativeToolTip": "I18n\\en.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-01-11T01:25:19.217Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "EventPatchBootUpside.cs",
               "DocumentMoniker": "C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Mine\\ExtraBootOptions\\Patches\\EventPatchBootUpside.cs",
               "RelativeDocumentMoniker": "Patches\\EventPatchBootUpside.cs",
               "ToolTip": "C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Mine\\ExtraBootOptions\\Patches\\EventPatchBootUpside.cs",
               "RelativeToolTip": "Patches\\EventPatchBootUpside.cs",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAMwGkAAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAIwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-11T00:14:33.941Z",
+              "WhenOpened": "2026-01-11T01:25:14.661Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ModEntry.cs",
+              "DocumentMoniker": "C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Mine\\ExtraBootOptions\\ModEntry.cs",
+              "RelativeDocumentMoniker": "ModEntry.cs",
+              "ToolTip": "C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Mine\\ExtraBootOptions\\ModEntry.cs",
+              "RelativeToolTip": "ModEntry.cs",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAIwCwAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-11T01:25:02.697Z",
               "EditorCaption": ""
             }
           ]

@@ -22,6 +22,7 @@ public class NewBootOptionsFTLCasings : Artifact, IRegisterable
             Meta = new ArtifactMeta
             {
                 pools = [ArtifactPool.EventOnly],
+                unremovable = true
             },
             Name = ModEntry.Instance.AnyLocalizations.Bind(["artifact", "NewBootOptionsFTLCasings", "name"]).Localize,
             Description = ModEntry.Instance.AnyLocalizations.Bind(["artifact", "NewBootOptionsFTLCasings", "desc"]).Localize,

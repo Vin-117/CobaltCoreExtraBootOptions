@@ -22,6 +22,7 @@ public class NewBootOptionsShieldShunt : Artifact, IRegisterable
             Meta = new ArtifactMeta
             {
                 pools = [ArtifactPool.EventOnly],
+                unremovable = true
             },
             Name = ModEntry.Instance.AnyLocalizations.Bind(["artifact", "NewBootOptionsShieldShunt", "name"]).Localize,
             Description = ModEntry.Instance.AnyLocalizations.Bind(["artifact", "NewBootOptionsShieldShunt", "desc"]).Localize,

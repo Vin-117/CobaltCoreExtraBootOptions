@@ -19,4 +19,6 @@ internal sealed class BootUpsideRemoveAllArtifactsForBossArtifact : Choice;
 
 internal sealed class BootUpsideGainBasics : Choice;
 
+internal sealed class BootUpsideLotsOfCards: Choice;
+
 

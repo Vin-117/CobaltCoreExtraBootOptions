@@ -44,9 +44,6 @@ public sealed class ModEntry : SimpleMod {
 		NewBootOptionsEventArtifacts
 		.Concat(NewBootOptionsCards);
 
-
-
-
     public ModEntry(IPluginPackage<IModManifest> package, IModHelper helper, ILogger logger) : base(package, helper, logger)
 	{
 		Instance = this;
@@ -73,6 +70,12 @@ public sealed class ModEntry : SimpleMod {
             "gainTrueRandomUpgrades",
             () => "Upgrade 3 random cards to random types",
             choice => choice is BootUpsideRandomUpgrades
+        ));
+
+        helper.ModRegistry.AwaitApi<ICustomRunOptionsApi>("Shockah.CustomRunOptions", api => api.RegisterBootSequenceUpside(
+            "chooseTonsOfCards",
+            () => "Gain 1 of 5 cards",
+            choice => choice is BootUpsideLotsOfCards
         ));
 
         helper.ModRegistry.AwaitApi<ICustomRunOptionsApi>("Shockah.CustomRunOptions", api => api.RegisterBootSequenceUpside(

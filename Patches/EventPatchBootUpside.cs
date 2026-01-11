@@ -115,7 +115,7 @@ public static class EventsPatchesBootUpside
             key = key,
             actions = 
             [   
-                (CardAction)new ACardOfferingBasics
+                (CardAction)new ACardOffering
                 {
                     amount = 3,
                     rarityOverride = Rarity.common,
@@ -125,25 +125,43 @@ public static class EventsPatchesBootUpside
             ]
         });
 
-        choices.Add(new BootUpsideRemoveAllArtifactsForBossArtifact
+        choices.Add(new BootUpsideLotsOfCards
         {
-            label = ModEntry.Instance.Localizations.Localize(FullLocKey(locKey, "gainBossArtifactForNodes")),
+            label = ModEntry.Instance.Localizations.Localize(FullLocKey(locKey, "chooseTonsOfCards")),
             key = key,
             actions =
             [
-                (CardAction)new AAddArtifact
+                (CardAction)new ACardOffering
                 {
-                    artifact = new NewBootOptionsRemoveAllArtifacts()
-                },
-                (CardAction)new AArtifactOffering
-                {
-                    amount = 1,
-                    canSkip = false,
-                    limitPools = new List<ArtifactPool> { ArtifactPool.Boss }
+                    amount = 5,
+                    canSkip = false
                 }
-
             ]
         });
+
+        if (!((from r in state.EnumerateAllArtifacts()
+             where r is NewBootOptionsRemoveFirstArtifact
+               select r).ToList().Count > 0)) 
+        {
+            choices.Add(new BootUpsideRemoveAllArtifactsForBossArtifact
+            {
+                label = ModEntry.Instance.Localizations.Localize(FullLocKey(locKey, "gainBossArtifactForNodes")),
+                key = key,
+                actions =
+                [
+                    (CardAction)new AAddArtifact
+                    {
+                        artifact = new NewBootOptionsRemoveAllArtifacts()
+                    },
+                    (CardAction)new AArtifactOffering
+                    {
+                        amount = 1,
+                        canSkip = false,
+                        limitPools = new List<ArtifactPool> { ArtifactPool.Boss }
+                    }
+                ]
+            });
+        }
 
     }
 

@@ -2,6 +2,7 @@
     "event": {
         "BootSequence": {
             "gainMaxShield": "Gain 2 <c=boldPink>max shield</c>",
+            "chooseTonsOfCards" : "Gain 1 of 5 cards",
             "gainBasics": "Gain 1 of 5 basic cards",
             "gainTrueRandomUpgrades" : "Upgrade 3 random cards to random types",
             "gainBossArtifactForNodes" : "Gain a boss arifact, remove all <c=artifact>artifact</c> node rewards",

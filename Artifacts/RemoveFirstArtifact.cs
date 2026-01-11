@@ -23,7 +23,9 @@ public class NewBootOptionsRemoveFirstArtifact : Artifact, IRegisterable
             Meta = new ArtifactMeta
             {
                 pools = [ArtifactPool.EventOnly],
+                unremovable = true
             },
+
             Name = ModEntry.Instance.AnyLocalizations.Bind(["artifact", "NewBootOptionsRemoveFirstArtifact", "name"]).Localize,
             Description = ModEntry.Instance.AnyLocalizations.Bind(["artifact", "NewBootOptionsRemoveFirstArtifact", "desc"]).Localize,
             Sprite = helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/RemoveFirstArtifact.png")).Sprite
