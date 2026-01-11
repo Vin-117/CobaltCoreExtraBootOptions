@@ -70,6 +70,18 @@ public sealed class ModEntry : SimpleMod {
         helper.ModRegistry.AwaitApi<IMoreDifficultiesApi>("TheJazMaster.MoreDifficulties", api => MoreDifficultiesApi = api);
 
         helper.ModRegistry.AwaitApi<ICustomRunOptionsApi>("Shockah.CustomRunOptions", api => api.RegisterBootSequenceUpside(
+            "gainTrueRandomUpgrades",
+            () => "Upgrade 3 random cards to random types",
+            choice => choice is BootUpsideRandomUpgrades
+        ));
+
+        helper.ModRegistry.AwaitApi<ICustomRunOptionsApi>("Shockah.CustomRunOptions", api => api.RegisterBootSequenceUpside(
+            "gainBasics",
+            () => "Gain 1 of 5 basic cards",
+            choice => choice is BootUpsideGainBasics
+        ));
+
+        helper.ModRegistry.AwaitApi<ICustomRunOptionsApi>("Shockah.CustomRunOptions", api => api.RegisterBootSequenceUpside(
             "gainMaxShield",
             () => "Gain 2 <c=boldPink>max shield</c>",
             choice => choice is BootUpsideMaxShield

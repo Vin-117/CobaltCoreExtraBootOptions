@@ -1,7 +1,9 @@
 {
     "event": {
         "BootSequence": {
-            "gainMaxShield": "Gain 2 <c=keyword>max shield</c>",
+            "gainMaxShield": "Gain 2 <c=boldPink>max shield</c>",
+            "gainBasics": "Gain 1 of 5 basic cards",
+            "gainTrueRandomUpgrades" : "Upgrade 3 random cards to random types",
             "gainBossArtifactForNodes" : "Gain a boss arifact, remove all <c=artifact>artifact</c> node rewards",
             "gainUpgradedCommon": "Gain 1 of 3 upgraded common cards",
             "LoseTwoHull": "<c=downside>Lose 2</c> <c=hull>hull</c>",

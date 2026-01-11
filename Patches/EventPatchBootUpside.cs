@@ -10,6 +10,7 @@ using System.Net.Sockets;
 using System.Reflection;
 using System.Reflection.Emit;
 using Vintage.NewBootOptions.Artifacts;
+using Vintage.NewBootOptions.Features;
 
 namespace Vintage.NewBootOptions.Patches;
 
@@ -75,13 +76,46 @@ public static class EventsPatchesBootUpside
             ]
         });
 
+        choices.Add(new BootUpsideRandomUpgrades
+        {
+            label = ModEntry.Instance.Localizations.Localize(FullLocKey(locKey, "gainTrueRandomUpgrades")),
+            key = key,
+            actions =
+            [
+                (CardAction)new AUpgradeTrueRandom
+                {
+                    count = 3
+                }
+            ]
+        });
+
+        choices.Add(new BootUpsideGainBasics
+        {
+            label = ModEntry.Instance.Localizations.Localize(FullLocKey(locKey, "gainBasics")),
+            key = key,
+            actions =
+            [
+                new ASpecificCardOffering
+                {
+                    Destination = CardDestination.Deck,
+                    Cards = [
+                        new BasicShieldColorless{ },
+                        new DodgeColorless{ },
+                        new CannonColorless{ },
+                        new BasicSpacer{ },
+                        new DroneshiftColorless{ }
+                    ],
+                },
+            ]
+        });
+
         choices.Add(new BootUpsideUpgradedCommonCard
         {
             label = ModEntry.Instance.Localizations.Localize(FullLocKey(locKey, "gainUpgradedCommon")),
             key = key,
             actions = 
             [   
-                (CardAction)new ACardOffering
+                (CardAction)new ACardOfferingBasics
                 {
                     amount = 3,
                     rarityOverride = Rarity.common,
