@@ -89,7 +89,21 @@ public static class EventsPatchesBootUpside
             ]
         });
 
-        choices.Add(new BootUpsideGainBasics
+        choices.Add(new BootUpsideRemoveAndUpgrade
+        {
+            label = ModEntry.Instance.Localizations.Localize(FullLocKey(locKey, "removeAndUpgrade")),
+            key = key,
+            actions =
+            [
+                (CardAction)new ARemoveCard(),
+                (CardAction)new AUpgradeTrueRandom
+                {
+                    count = 1
+                }
+            ]
+        });
+
+        /*choices.Add(new BootUpsideGainBasics
         {
             label = ModEntry.Instance.Localizations.Localize(FullLocKey(locKey, "gainBasics")),
             key = key,
@@ -107,7 +121,7 @@ public static class EventsPatchesBootUpside
                     ],
                 },
             ]
-        });
+        });*/
 
         choices.Add(new BootUpsideUpgradedCommonCard
         {

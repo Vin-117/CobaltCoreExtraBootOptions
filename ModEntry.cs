@@ -78,11 +78,11 @@ public sealed class ModEntry : SimpleMod {
             choice => choice is BootUpsideLotsOfCards
         ));
 
-        helper.ModRegistry.AwaitApi<ICustomRunOptionsApi>("Shockah.CustomRunOptions", api => api.RegisterBootSequenceUpside(
+        /*helper.ModRegistry.AwaitApi<ICustomRunOptionsApi>("Shockah.CustomRunOptions", api => api.RegisterBootSequenceUpside(
             "gainBasics",
             () => "Gain 1 of 5 basic cards",
             choice => choice is BootUpsideGainBasics
-        ));
+        ));*/
 
         helper.ModRegistry.AwaitApi<ICustomRunOptionsApi>("Shockah.CustomRunOptions", api => api.RegisterBootSequenceUpside(
             "gainMaxShield",
@@ -102,6 +102,17 @@ public sealed class ModEntry : SimpleMod {
             choice => choice is BootUpsideUpgradedCommonCard
         ));
 
+        helper.ModRegistry.AwaitApi<ICustomRunOptionsApi>("Shockah.CustomRunOptions", api => api.RegisterBootSequenceUpside(
+            "removeAndUpgrade",
+            () => "Remove a card, then upgrade a random card",
+            choice => choice is BootUpsideRemoveAndUpgrade
+        ));
+
+        helper.ModRegistry.AwaitApi<ICustomRunOptionsApi>("Shockah.CustomRunOptions", api => api.RegisterBootSequenceDownside(
+            "RemoveRandomCard",
+            () => "<c=downside>Remove a random non-basic card</c>",
+            choice => choice is BootdownsideRemoveRandomCard
+        ));
 
         helper.ModRegistry.AwaitApi<ICustomRunOptionsApi>("Shockah.CustomRunOptions", api => api.RegisterBootSequenceDownside(
             "LoseOneThirdHull",
@@ -121,15 +132,15 @@ public sealed class ModEntry : SimpleMod {
             choice => choice is BootDownsideSystemFailure
         ));
 
-        helper.ModRegistry.AwaitApi<ICustomRunOptionsApi>("Shockah.CustomRunOptions", api => api.RegisterBootSequenceDownside(
+        /*helper.ModRegistry.AwaitApi<ICustomRunOptionsApi>("Shockah.CustomRunOptions", api => api.RegisterBootSequenceDownside(
             "GainFTLCanister",
             () => "<c=downside>Gain 1 <c=trash>FTL Canister</c> every zone</c>",
             choice => choice is BootdownsideFTLCanister
-        ));
+        ));*/
 
         helper.ModRegistry.AwaitApi<ICustomRunOptionsApi>("Shockah.CustomRunOptions", api => api.RegisterBootSequenceDownside(
             "GainShieldShunt",
-            () => "<c=downside>Lose 1 <c=keyword>shield</c> on combat start</c>",
+            () => "<c=downside>Replace <c=artifact>WARP PREP</c> with <c=artifact>WARP BASIC</c></c>",
             choice => choice is BootdownsideShieldShunt
         ));
 

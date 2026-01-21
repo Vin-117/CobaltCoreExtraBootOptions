@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NewBootOptions")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("0.8.1.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.8.1+344e48c0172bb205e5df2cd80d3106da4f728b24")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.8.1+9ea6b96b15f27fa6ff65f4d5ea340ff328d8e8df")]
 [assembly: System.Reflection.AssemblyProductAttribute("NewBootOptions")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NewBootOptions")]
 [assembly: System.Reflection.AssemblyVersionAttribute("0.8.1.0")]

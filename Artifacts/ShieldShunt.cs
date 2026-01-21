@@ -22,7 +22,6 @@ public class NewBootOptionsShieldShunt : Artifact, IRegisterable
             Meta = new ArtifactMeta
             {
                 pools = [ArtifactPool.EventOnly],
-                unremovable = true
             },
             Name = ModEntry.Instance.AnyLocalizations.Bind(["artifact", "NewBootOptionsShieldShunt", "name"]).Localize,
             Description = ModEntry.Instance.AnyLocalizations.Bind(["artifact", "NewBootOptionsShieldShunt", "desc"]).Localize,
@@ -36,8 +35,8 @@ public class NewBootOptionsShieldShunt : Artifact, IRegisterable
         {
             combat.Queue(new AStatus
             {
-                status = Status.shield,
-                statusAmount = -1,
+                status = Status.evade,
+                statusAmount = 1,
                 targetPlayer = true,
                 artifactPulse = Key()
             });
@@ -47,7 +46,7 @@ public class NewBootOptionsShieldShunt : Artifact, IRegisterable
     public override List<Tooltip>? GetExtraTooltips()
     {
         List<Tooltip> list = new List<Tooltip>();
-        list.Add(new TTGlossary("status.shield", 1));
+        list.Add(new TTGlossary("status.evade"));
         return list;
     }
 

@@ -11,6 +11,7 @@ using System.Reflection;
 using System.Reflection.Emit;
 using Vintage.NewBootOptions.Artifacts;
 using Vintage.NewBootOptions.Cards;
+using Vintage.NewBootOptions.Features;
 
 namespace Vintage.NewBootOptions.Patches;
 
@@ -107,7 +108,7 @@ public static class EventsPatchesBootDownside
             ]
         });
 
-        choices.Add(new BootdownsideFTLCanister
+        /*choices.Add(new BootdownsideFTLCanister
         {
             label = ModEntry.Instance.Localizations.Localize(FullLocKey(locKey, "GainFTLCanister")),
             key = key,
@@ -118,20 +119,45 @@ public static class EventsPatchesBootDownside
                     artifact = new NewBootOptionsFTLCasings()
                 }
             ]
-        });
+        });*/
 
-        choices.Add(new BootdownsideShieldShunt
+        if ((from r in state.EnumerateAllArtifacts()
+             where r is ShieldPrep
+             select r).ToList().Count > 0) 
         {
-            label = ModEntry.Instance.Localizations.Localize(FullLocKey(locKey, "GainShieldShunt")),
+
+            choices.Add(new BootdownsideShieldShunt
+            {
+                label = ModEntry.Instance.Localizations.Localize(FullLocKey(locKey, "GainShieldShunt")),
+                key = key,
+                actions =
+                [
+                    (CardAction)new ALoseArtifact
+                    {
+                        artifactType = "ShieldPrep"
+                    },
+                    (CardAction)new AAddArtifact
+                    {
+                        artifact = new NewBootOptionsShieldShunt()
+                    }
+                ]
+            });
+
+        }
+
+        choices.Add(new BootdownsideRemoveRandomCard
+        {
+            label = ModEntry.Instance.Localizations.Localize(FullLocKey(locKey, "RemoveRandomCard")),
             key = key,
             actions =
             [
-                (CardAction)new AAddArtifact
+                new RemoveRandom
                 {
-                    artifact = new NewBootOptionsShieldShunt()
-                }
+                    count = 1
+                },
             ]
         });
+
 
         choices.Add(new BootdownsideRemoveAddCorrupted
         {

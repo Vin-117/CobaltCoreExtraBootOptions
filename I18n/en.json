@@ -4,16 +4,18 @@
             "gainMaxShield": "Gain 2 <c=boldPink>max shield</c>",
             "chooseTonsOfCards" : "Gain 1 of 5 cards",
             "gainBasics": "Gain 1 of 5 basic cards",
-            "gainTrueRandomUpgrades" : "Upgrade 3 random cards to random types",
+            "gainTrueRandomUpgrades" : "Upgrade 3 random cards",
             "gainBossArtifactForNodes" : "Gain a boss arifact, remove all <c=artifact>artifact</c> node rewards",
             "gainUpgradedCommon": "Gain 1 of 3 upgraded common cards",
             "LoseTwoHull": "<c=downside>Lose 2</c> <c=hull>hull</c>",
             "GainSafetyOverride" : "<c=downside>Gain 1 non-temp <c=trash>Safety Override</c></c>",
             "GainSystemFailure" : "<c=downside>Gain 1 <c=trash>System Failure</c></c>",
+            "RemoveRandomCard" : "<c=downside>Remove a random non-basic card</c>",
             "GainFTLCanister" : "<c=downside>Gain 1 <c=trash>FTL Canister</c> every zone</c>",
-            "GainShieldShunt" : "<c=downside>Lose 1 <c=keyword>shield</c> on combat start</c>",
+            "GainShieldShunt" : "<c=downside>Replace <c=artifact>WARP PREP</c> with <c=artifact>WARP BASIC</c></c>",
             "RemoveAddCorrupted" : "<c=downside>Remove a card, then gain 1</c> <c=trash>Corrupted Core</c>",
-            "RemoveFirstArtifact" :  "<c=downside>The first <c=artifact>artifact</c> node is empty</c>"
+            "RemoveFirstArtifact" :  "<c=downside>The first <c=artifact>artifact</c> node is empty</c>",
+            "removeAndUpgrade" : "Remove a card, then upgrade a random card"
         }
     },
     "artifact" : {
@@ -22,8 +24,8 @@
             "desc" : "<c=downside>Gain 1 <c=trash>FTL Canister</c> at the start of every zone.</c>"
         },
         "NewBootOptionsShieldShunt" : {
-            "name" : "SHIELD SHUNT",
-            "desc" : "<c=downside>Lose 1 <c=status>SHIELD</c> on the first turn of combat.</c>"
+            "name" : "WARP BASIC",
+            "desc" : "Gain 1 <c=status>EVADE</c> on the first turn."
         },
         "NewBootOptionsRemoveFirstArtifact" : {
             "name" : "ARTIFACT LOSS",

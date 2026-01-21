@@ -15,10 +15,14 @@ internal sealed class BootdownsideRemoveAddCorrupted : Choice;
 
 internal sealed class BootdownsideRemoveFirstArtifact : Choice;
 
+internal sealed class BootdownsideRemoveRandomCard : Choice;
+
 internal sealed class BootUpsideRemoveAllArtifactsForBossArtifact : Choice;
 
 internal sealed class BootUpsideGainBasics : Choice;
 
 internal sealed class BootUpsideLotsOfCards: Choice;
+
+internal sealed class BootUpsideRemoveAndUpgrade : Choice;
 
 
