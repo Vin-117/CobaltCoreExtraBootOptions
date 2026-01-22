@@ -1,4 +1,5 @@
 ﻿using JetBrains.Annotations;
+using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +24,8 @@ public class RemoveRandom : CardAction
     {
         timer = 0.0;
 
+        List<int> list = new List<int>();
+
         bool cardWasDeleted = false;
         int i = 0;
         int j = 0;
@@ -33,13 +36,12 @@ public class RemoveRandom : CardAction
             Random random = new Random();
             Card? card = s.deck.Shuffle(s.rngActions).FirstOrDefault();
 
-
-
             if (card != null)
             {
                 if (!(BlacklistedCards.Contains(card.GetType())))
                 {
-                    g.state.RemoveCardFromWhereverItIs(card.uuid);
+                    list.Add(card.uuid);
+                    //g.state.RemoveCardFromWhereverItIs(card.uuid);
                     cardWasDeleted = true;
                 }
             }
@@ -57,6 +59,16 @@ public class RemoveRandom : CardAction
                 break;
             }
 
+        }
+
+        if (list.Count > 0)
+        {
+            //return new ShowCards
+            return new ShowCardsRemoved
+            {
+                //messageKey = "showcards.upgraded",
+                cardIds = list.ToList(),
+            };
         }
 
         return null;
