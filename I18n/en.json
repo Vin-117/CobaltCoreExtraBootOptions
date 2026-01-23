@@ -5,7 +5,7 @@
             "chooseTonsOfCards" : "Gain 1 of 5 cards",
             "gainBasics": "Gain 1 of 5 basic cards",
             "gainTrueRandomUpgrades" : "Upgrade 3 random cards",
-            "gainBossArtifactForNodes" : "Gain a boss arifact, remove all <c=artifact>artifact</c> node rewards",
+            "gainBossArtifactForNodes" : "Gain a boss arifact, remove <c=artifact>artifact</c> node rewards",
             "gainUpgradedCommon": "Gain 1 of 3 upgraded common cards",
             "LoseTwoHull": "<c=downside>Lose 2</c> <c=hull>hull</c>",
             "GainSafetyOverride" : "<c=downside>Gain 1 non-temp <c=trash>Safety Override</c></c>",
@@ -28,12 +28,12 @@
             "desc" : "Gain 1 <c=status>EVADE</c> on the first turn."
         },
         "NewBootOptionsRemoveFirstArtifact" : {
-            "name" : "ARTIFACT LOSS",
-            "desc" : "<c=downside>The first <c=artifact>artifact</c> map node is empty.</c>"
+            "name" : "ARTIFACT TAX",
+            "desc" : "<c=downside>The first <c=artifact>Artifact</c> map node gives nothing.</c>"
         },
         "NewBootOptionsRemoveAllArtifacts" : {
-            "name" : "ARTIFACT REMOVAL",
-            "desc" : "<c=downside>ALL <c=artifact>artifact</c> map nodes are empty.</c>"
+            "name" : "TOTAL ARTIFACT LOSS",
+            "desc" : "<c=downside>ALL <c=artifact>Artifact</c> map nodes give nothing.</c>"
         },
     },
     "card" : {

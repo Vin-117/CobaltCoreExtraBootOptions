@@ -8,8 +8,6 @@ using System.Runtime.CompilerServices;
 namespace Vintage.NewBootOptions.Features;
 public class RemoveRandom : CardAction
 {
-    //public Upgrade upgradePath;
-
     public int count = 1;
     private static List<Type> BlacklistedCards /*{ get; set; }*/ = [
         typeof(BasicShieldColorless),
@@ -23,15 +21,14 @@ public class RemoveRandom : CardAction
     public override Route? BeginWithRoute(G g, State s, Combat c)
     {
         timer = 0.0;
-
-        List<int> list = new List<int>();
+        int deleteCardID = new int();
 
         bool cardWasDeleted = false;
         int i = 0;
         int j = 0;
         int breakCount = 100;
 
-        while (i < count)
+        while (!cardWasDeleted)
         {
             Random random = new Random();
             Card? card = s.deck.Shuffle(s.rngActions).FirstOrDefault();
@@ -40,16 +37,9 @@ public class RemoveRandom : CardAction
             {
                 if (!(BlacklistedCards.Contains(card.GetType())))
                 {
-                    list.Add(card.uuid);
-                    //g.state.RemoveCardFromWhereverItIs(card.uuid);
+                    deleteCardID = card.uuid;
                     cardWasDeleted = true;
                 }
-            }
-
-            if (cardWasDeleted) 
-            {
-                i++;
-                cardWasDeleted = false;
             }
 
             j++;
@@ -61,18 +51,34 @@ public class RemoveRandom : CardAction
 
         }
 
-        if (list.Count > 0)
+        if (cardWasDeleted)
         {
-            //return new ShowCards
             return new ShowCardsRemoved
             {
-                //messageKey = "showcards.upgraded",
-                cardIds = list.ToList(),
+                cardId = deleteCardID
             };
         }
 
         return null;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     public override List<Tooltip> GetTooltips(State s)
     {

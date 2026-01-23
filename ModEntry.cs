@@ -28,14 +28,14 @@ public sealed class ModEntry : SimpleMod {
 	internal ILocaleBoundNonNullLocalizationProvider<IReadOnlyList<string>> Localizations { get; }
 
     private static List<Type> NewBootOptionsEventArtifacts = [
-        typeof(NewBootOptionsFTLCasings),
+        //typeof(NewBootOptionsFTLCasings),
         typeof(NewBootOptionsShieldShunt),
         typeof(NewBootOptionsRemoveFirstArtifact),
         typeof(NewBootOptionsRemoveAllArtifacts)
     ];
 
 	private static List<Type> NewBootOptionsCards = [
-		typeof (NewBootOptionsFTLCasingCard),
+		//typeof (NewBootOptionsFTLCasingCard),
         typeof (NewBootOptionsSystemFailure)
 		];
 
@@ -67,15 +67,21 @@ public sealed class ModEntry : SimpleMod {
         helper.ModRegistry.AwaitApi<IMoreDifficultiesApi>("TheJazMaster.MoreDifficulties", api => MoreDifficultiesApi = api);
 
         helper.ModRegistry.AwaitApi<ICustomRunOptionsApi>("Shockah.CustomRunOptions", api => api.RegisterBootSequenceUpside(
-            "gainTrueRandomUpgrades",
-            () => "Upgrade 3 random cards to random types",
-            choice => choice is BootUpsideRandomUpgrades
+            "gainBossArtifactForNodes",
+            () => "Gain a boss arifact, remove <c=artifact>artifact</c> node rewards",
+            choice => choice is BootUpsideRemoveAllArtifactsForBossArtifact
         ));
 
         helper.ModRegistry.AwaitApi<ICustomRunOptionsApi>("Shockah.CustomRunOptions", api => api.RegisterBootSequenceUpside(
-            "chooseTonsOfCards",
-            () => "Gain 1 of 5 cards",
-            choice => choice is BootUpsideLotsOfCards
+            "removeAndUpgrade",
+            () => "Remove a card, then upgrade a random card",
+            choice => choice is BootUpsideRemoveAndUpgrade
+        ));
+
+        helper.ModRegistry.AwaitApi<ICustomRunOptionsApi>("Shockah.CustomRunOptions", api => api.RegisterBootSequenceUpside(
+            "gainTrueRandomUpgrades",
+            () => "Upgrade 3 random cards",
+            choice => choice is BootUpsideRandomUpgrades
         ));
 
         /*helper.ModRegistry.AwaitApi<ICustomRunOptionsApi>("Shockah.CustomRunOptions", api => api.RegisterBootSequenceUpside(
@@ -85,33 +91,21 @@ public sealed class ModEntry : SimpleMod {
         ));*/
 
         helper.ModRegistry.AwaitApi<ICustomRunOptionsApi>("Shockah.CustomRunOptions", api => api.RegisterBootSequenceUpside(
-            "gainMaxShield",
-            () => "Gain 2 <c=boldPink>max shield</c>",
-            choice => choice is BootUpsideMaxShield
-        ));
-
-        helper.ModRegistry.AwaitApi<ICustomRunOptionsApi>("Shockah.CustomRunOptions", api => api.RegisterBootSequenceUpside(
-            "gainBossArtifactForNodes",
-            () => "Gain a boss arifact, remove all <c=artifact>artifact</c> node rewards",
-            choice => choice is BootUpsideRemoveAllArtifactsForBossArtifact
-        ));
-
-        helper.ModRegistry.AwaitApi<ICustomRunOptionsApi>("Shockah.CustomRunOptions", api => api.RegisterBootSequenceUpside(
             "gainUpgradedCommon",
             () => "Gain 1 of 3 upgraded common cards",
             choice => choice is BootUpsideUpgradedCommonCard
         ));
 
         helper.ModRegistry.AwaitApi<ICustomRunOptionsApi>("Shockah.CustomRunOptions", api => api.RegisterBootSequenceUpside(
-            "removeAndUpgrade",
-            () => "Remove a card, then upgrade a random card",
-            choice => choice is BootUpsideRemoveAndUpgrade
+            "chooseTonsOfCards",
+            () => "Gain 1 of 5 cards",
+            choice => choice is BootUpsideLotsOfCards
         ));
 
-        helper.ModRegistry.AwaitApi<ICustomRunOptionsApi>("Shockah.CustomRunOptions", api => api.RegisterBootSequenceDownside(
-            "RemoveRandomCard",
-            () => "<c=downside>Remove a random non-basic card</c>",
-            choice => choice is BootdownsideRemoveRandomCard
+        helper.ModRegistry.AwaitApi<ICustomRunOptionsApi>("Shockah.CustomRunOptions", api => api.RegisterBootSequenceUpside(
+            "gainMaxShield",
+            () => "Gain 2 <c=boldPink>max shield</c>",
+            choice => choice is BootUpsideMaxShield
         ));
 
         helper.ModRegistry.AwaitApi<ICustomRunOptionsApi>("Shockah.CustomRunOptions", api => api.RegisterBootSequenceDownside(
@@ -139,21 +133,27 @@ public sealed class ModEntry : SimpleMod {
         ));*/
 
         helper.ModRegistry.AwaitApi<ICustomRunOptionsApi>("Shockah.CustomRunOptions", api => api.RegisterBootSequenceDownside(
-            "GainShieldShunt",
-            () => "<c=downside>Replace <c=artifact>WARP PREP</c> with <c=artifact>WARP BASIC</c></c>",
-            choice => choice is BootdownsideShieldShunt
-        ));
-
-        helper.ModRegistry.AwaitApi<ICustomRunOptionsApi>("Shockah.CustomRunOptions", api => api.RegisterBootSequenceDownside(
             "RemoveAddCorrupted",
             () => "<c=downside>Remove a card, then gain a</c> <c=trash>Corrupted Core</c>",
             choice => choice is BootdownsideRemoveAddCorrupted
         ));
 
         helper.ModRegistry.AwaitApi<ICustomRunOptionsApi>("Shockah.CustomRunOptions", api => api.RegisterBootSequenceDownside(
+            "RemoveRandomCard",
+            () => "<c=downside>Remove a random non-basic card</c>",
+            choice => choice is BootdownsideRemoveRandomCard
+        ));
+
+        helper.ModRegistry.AwaitApi<ICustomRunOptionsApi>("Shockah.CustomRunOptions", api => api.RegisterBootSequenceDownside(
             "RemoveFirstArtifact",
             () => "<c=downside>The first <c=artifact>artifact</c> map node is empty</c>",
             choice => choice is BootdownsideRemoveFirstArtifact
+        ));
+
+        helper.ModRegistry.AwaitApi<ICustomRunOptionsApi>("Shockah.CustomRunOptions", api => api.RegisterBootSequenceDownside(
+            "GainShieldShunt",
+            () => "<c=downside>Replace <c=artifact>WARP PREP</c> with <c=artifact>WARP BASIC</c></c>",
+            choice => choice is BootdownsideShieldShunt
         ));
 
     }

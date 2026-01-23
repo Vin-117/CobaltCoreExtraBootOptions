@@ -8,8 +8,6 @@
         
     ],
     "UpdateChecks": {
-        // "NexusMods": {
-        //   "ID": 69
-        // }
+		"NexusMods": { "ID": 80 }
 	}
 }
