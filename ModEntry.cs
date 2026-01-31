@@ -68,7 +68,7 @@ public sealed class ModEntry : SimpleMod {
 
         helper.ModRegistry.AwaitApi<ICustomRunOptionsApi>("Shockah.CustomRunOptions", api => api.RegisterBootSequenceUpside(
             "gainBossArtifactForNodes",
-            () => "Gain a boss arifact, remove <c=artifact>artifact</c> node rewards",
+            () => "Gain a boss artifact, remove <c=artifact>artifact</c> node rewards",
             choice => choice is BootUpsideRemoveAllArtifactsForBossArtifact
         ));
 
