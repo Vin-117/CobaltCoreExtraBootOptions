@@ -1,22 +1,16 @@
 ﻿using JetBrains.Annotations;
 using Microsoft.Xna.Framework.Graphics;
+using Nickel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using TheJazMaster.MoreDifficulties;
 
 namespace Vintage.NewBootOptions.Features;
 public class RemoveRandom : CardAction
 {
     public int count = 1;
-    private static List<Type> BlacklistedCards /*{ get; set; }*/ = [
-        typeof(BasicShieldColorless),
-        typeof(DodgeColorless),
-        typeof(CannonColorless),
-        typeof(BasicSpacer),
-        typeof(DroneshiftColorless),
-        typeof(CorruptedCore)
-    ];
 
     public override Route? BeginWithRoute(G g, State s, Combat c)
     {
@@ -35,7 +29,7 @@ public class RemoveRandom : CardAction
 
             if (card != null)
             {
-                if (!(BlacklistedCards.Contains(card.GetType())))
+                if (!(ModEntry.NewBootOptionsRandomRemoveBlacklist.Contains(card.GetType())))
                 {
                     deleteCardID = card.uuid;
                     cardWasDeleted = true;
@@ -61,24 +55,6 @@ public class RemoveRandom : CardAction
 
         return null;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     public override List<Tooltip> GetTooltips(State s)
     {

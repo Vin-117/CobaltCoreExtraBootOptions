@@ -11,6 +11,7 @@ using Vintage.NewBootOptions.Artifacts;
 using Vintage.NewBootOptions.Cards;
 using Vintage.NewBootOptions.Patches;
 using TheJazMaster.MoreDifficulties;
+using JetBrains.Annotations;
 
 namespace Vintage.NewBootOptions;
 
@@ -34,10 +35,23 @@ public sealed class ModEntry : SimpleMod {
         typeof(NewBootOptionsRemoveAllArtifacts)
     ];
 
-	private static List<Type> NewBootOptionsCards = [
+    public static List<Type> NewBootOptionsRandomRemoveBlacklist = [
+        typeof(BasicShieldColorless),
+        typeof(DodgeColorless),
+        typeof(CannonColorless),
+        typeof(BasicSpacer),
+        typeof(DroneshiftColorless),
+        typeof(CorruptedCore)
+    ];
+
+    public static List<Type> NewBootOptionsRandomRemoveBlacklistMDO = [
+       
+    ];
+
+    private static List<Type> NewBootOptionsCards = [
 		//typeof (NewBootOptionsFTLCasingCard),
-        typeof (NewBootOptionsSystemFailure)
-		];
+        typeof(NewBootOptionsSystemFailure)
+	];
 
 
 	private static IEnumerable<Type> AllRegisterableTypes =
@@ -64,7 +78,24 @@ public sealed class ModEntry : SimpleMod {
 
         Settings = helper.Storage.LoadJson<Settings>(helper.Storage.GetMainStorageFile("json"));
 
-        helper.ModRegistry.AwaitApi<IMoreDifficultiesApi>("TheJazMaster.MoreDifficulties", api => MoreDifficultiesApi = api);
+        //helper.ModRegistry.AwaitApi<IMoreDifficultiesApi>("TheJazMaster.MoreDifficulties", api => MoreDifficultiesApi = api);
+
+        /*helper.ModRegistry.AwaitApi<IMoreDifficultiesApi>("TheJazMaster.MoreDifficulties", api =>
+        {
+            NewBootOptionsRandomRemoveBlacklist.Add(api.BasicOffencesCardType);
+            NewBootOptionsRandomRemoveBlacklist.Add(api.BasicDefencesCardType);
+            NewBootOptionsRandomRemoveBlacklist.Add(api.BasicManeuversCardType);
+            NewBootOptionsRandomRemoveBlacklist.Add(api.BasicBroadcastCardType);
+        });*/
+
+        helper.ModRegistry.AwaitApi<IMoreDifficultiesApi>("TheJazMaster.MoreDifficulties", api =>
+        {
+            NewBootOptionsRandomRemoveBlacklist.Add(api.BasicOffencesCardType);
+            NewBootOptionsRandomRemoveBlacklist.Add(api.BasicDefencesCardType);
+            NewBootOptionsRandomRemoveBlacklist.Add(api.BasicManeuversCardType);
+            NewBootOptionsRandomRemoveBlacklist.Add(api.BasicBroadcastCardType);
+            MoreDifficultiesApi = api;
+        });
 
         helper.ModRegistry.AwaitApi<ICustomRunOptionsApi>("Shockah.CustomRunOptions", api => api.RegisterBootSequenceUpside(
             "gainBossArtifactForNodes",
