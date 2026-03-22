@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Mine\\ExtraBootOptions\\NewBootOptions.csproj": {}
+    "C:\\Users\\conce\\Desktop\\Cobalt Core Mods\\Mine\\ExtraBootOptions\\NewBootOptions.csproj": {}
   },
   "projects": {
-    "C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Mine\\ExtraBootOptions\\NewBootOptions.csproj": {
-      "version": "1.0.2",
+    "C:\\Users\\conce\\Desktop\\Cobalt Core Mods\\Mine\\ExtraBootOptions\\NewBootOptions.csproj": {
+      "version": "1.0.3",
       "restore": {
-        "projectUniqueName": "C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Mine\\ExtraBootOptions\\NewBootOptions.csproj",
+        "projectUniqueName": "C:\\Users\\conce\\Desktop\\Cobalt Core Mods\\Mine\\ExtraBootOptions\\NewBootOptions.csproj",
         "projectName": "NewBootOptions",
-        "projectPath": "C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Mine\\ExtraBootOptions\\NewBootOptions.csproj",
+        "projectPath": "C:\\Users\\conce\\Desktop\\Cobalt Core Mods\\Mine\\ExtraBootOptions\\NewBootOptions.csproj",
         "packagesPath": "C:\\Users\\conce\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\conce\\OneDrive\\Desktop\\Misc Folders\\Cobalt Core Mods\\Mine\\ExtraBootOptions\\obj\\",
+        "outputPath": "C:\\Users\\conce\\Desktop\\Cobalt Core Mods\\Mine\\ExtraBootOptions\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\conce\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -35,7 +35,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -63,26 +63,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.23, 8.0.23]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.23, 8.0.23]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.23, 8.0.23]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

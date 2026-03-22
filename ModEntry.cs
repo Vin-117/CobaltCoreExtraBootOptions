@@ -50,7 +50,9 @@ public sealed class ModEntry : SimpleMod {
 
     private static List<Type> NewBootOptionsCards = [
 		//typeof (NewBootOptionsFTLCasingCard),
-        typeof(NewBootOptionsSystemFailure)
+        typeof(NewBootOptionsSystemFailure),
+        typeof(NewBootOptionsEmptyVessel),
+        typeof(NewBootOptionsMisfire)
 	];
 
 
@@ -147,7 +149,7 @@ public sealed class ModEntry : SimpleMod {
 
         helper.ModRegistry.AwaitApi<ICustomRunOptionsApi>("Shockah.CustomRunOptions", api => api.RegisterBootSequenceDownside(
             "GainSafetyOverride",
-            () => "<c=downside>Gain 1 non-temp <c=trash>Safety Override</c></c>",
+            () => "<c=downside>Gain 1 <c=trash>Misfire</c></c>",
             choice => choice is BootDownsideSafetyOverride
         ));
 
@@ -157,15 +159,9 @@ public sealed class ModEntry : SimpleMod {
             choice => choice is BootDownsideSystemFailure
         ));
 
-        /*helper.ModRegistry.AwaitApi<ICustomRunOptionsApi>("Shockah.CustomRunOptions", api => api.RegisterBootSequenceDownside(
-            "GainFTLCanister",
-            () => "<c=downside>Gain 1 <c=trash>FTL Canister</c> every zone</c>",
-            choice => choice is BootdownsideFTLCanister
-        ));*/
-
         helper.ModRegistry.AwaitApi<ICustomRunOptionsApi>("Shockah.CustomRunOptions", api => api.RegisterBootSequenceDownside(
             "RemoveAddCorrupted",
-            () => "<c=downside>Remove a card, then gain a</c> <c=trash>Corrupted Core</c>",
+            () => "<c=downside>Remove a card, then gain 1</c> <c=trash>Null</c></c>",
             choice => choice is BootdownsideRemoveAddCorrupted
         ));
 

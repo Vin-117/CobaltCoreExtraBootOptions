@@ -6,7 +6,7 @@ using Nickel;
 namespace Vintage.NewBootOptions.Cards;
 
 
-public class NewBootOptionsFTLCasingCard : Card, IRegisterable
+public class NewBootOptionsEmptyVessel : Card, IRegisterable
 {
     public static void Register(IPluginPackage<IModManifest> package, IModHelper helper)
     {
@@ -20,8 +20,8 @@ public class NewBootOptionsFTLCasingCard : Card, IRegisterable
                 dontOffer = true,
                 //upgradesTo = [Upgrade.A, Upgrade.B]
             },
-            Name = ModEntry.Instance.AnyLocalizations.Bind(["card", "NewBootOptionsFTLCasingCard", "name"]).Localize,
-            Art = helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/TrashBootCanister.png")).Sprite,
+            Name = ModEntry.Instance.AnyLocalizations.Bind(["card", "NewBootOptionsEmptyVessel", "name"]).Localize, 
+            Art = helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/nullimage.png")).Sprite,
         });
     }
 
@@ -34,19 +34,17 @@ public class NewBootOptionsFTLCasingCard : Card, IRegisterable
                 {
                     return new CardData 
                     {
-                        cost = 3,
-                        singleUse = true,
-                        description = string.Format(ModEntry.Instance.Localizations.Localize(["card", "NewBootOptionsFTLCasingCard", "desc"]))
+                        cost = 0,
+                        unplayable = true,
+                        //description = string.Format(ModEntry.Instance.Localizations.Localize(["card", "NewBootOptionsFTLCasingCard", "desc"]))
                     };
                 }
             default:
                 {
                     return new CardData
                     {
-                        cost = 3,
-                        exhaust = true,
-                        singleUse = true,
-                        retain = true
+                        cost = 0,
+                        unplayable = true,
                     };
                 }
         }

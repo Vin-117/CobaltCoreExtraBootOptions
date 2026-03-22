@@ -7,7 +7,6 @@ internal sealed class BootUpsideUpgradedCommonCard : Choice;
 internal sealed class BootDownsideTwoHull : Choice;
 internal sealed class BootDownsideSafetyOverride : Choice;
 internal sealed class BootDownsideSystemFailure : Choice;
-internal sealed class BootdownsideFTLCanister : Choice;
 
 internal sealed class BootdownsideShieldShunt : Choice;
 

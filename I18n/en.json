@@ -8,23 +8,19 @@
             "gainBossArtifactForNodes" : "Gain a boss arifact, remove <c=artifact>artifact</c> node rewards",
             "gainUpgradedCommon": "Gain 1 of 3 upgraded common cards",
             "LoseTwoHull": "<c=downside>Lose 2</c> <c=hull>hull</c>",
-            "GainSafetyOverride" : "<c=downside>Gain 1 non-temp <c=trash>Safety Override</c></c>",
+            "GainSafetyOverride" : "<c=downside>Gain 1 <c=trash>Misfire</c></c>",
             "GainSystemFailure" : "<c=downside>Gain 1 <c=trash>System Failure</c></c>",
             "RemoveRandomCard" : "<c=downside>Remove a random non-basic card</c>",
             "GainFTLCanister" : "<c=downside>Gain 1 <c=trash>FTL Canister</c> every zone</c>",
-            "GainShieldShunt" : "<c=downside>Replace <c=artifact>WARP PREP</c> with <c=artifact>WARP BASIC</c></c>",
-            "RemoveAddCorrupted" : "<c=downside>Remove a card, then gain 1</c> <c=trash>Corrupted Core</c>",
+            "GainShieldShunt" : "<c=downside>Replace <c=artifact>WARP PREP</c> with <c=artifact>BASIC WARP</c></c>",
+            "RemoveAddCorrupted" : "<c=downside>Remove a card, then gain 1</c> <c=trash>Null</c></c>",
             "RemoveFirstArtifact" :  "<c=downside>The first <c=artifact>artifact</c> node is empty</c>",
             "removeAndUpgrade" : "Remove a card, then upgrade a random card"
         }
     },
     "artifact" : {
-        "NewBootOptionsFTLCasings" : {
-            "name" : "FTL SAFETY CANISTER",
-            "desc" : "<c=downside>Gain 1 <c=trash>FTL Canister</c> at the start of every zone.</c>"
-        },
         "NewBootOptionsShieldShunt" : {
-            "name" : "WARP BASIC",
+            "name" : "BASIC WARP",
             "desc" : "Gain 1 <c=status>EVADE</c> on the first turn."
         },
         "NewBootOptionsRemoveFirstArtifact" : {
@@ -37,14 +33,18 @@
         },
     },
     "card" : {
-        "NewBootOptionsFTLCasingCard" : 
-        {
-            "name" : "FTL Canister",
-            "desc" : "<c=textFaint>The 'proper' way to dispose of FTL byproducts.</c>"
-        },
         "NewBootOptionsSystemFailure" : 
         {
             "name" : "System Failure"
-        }
+        },
+        "NewBootOptionsEmptyVessel" : 
+        {
+            "name" : "Null"
+        },
+        "NewBootOptionsMisfire" : 
+        {
+            "name" : "Misfire",
+            "desc" : "On draw, <c=downside>immediately</c> attack for <c=attack>{{cnt}}</c> damage."
+        },
     }
 }

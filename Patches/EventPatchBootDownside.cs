@@ -84,9 +84,8 @@ public static class EventsPatchesBootDownside
             [
                 (CardAction)new AAddCard
                 {
-                    card = new TrashAutoShoot()
+                    card = new NewBootOptionsMisfire()
                     {
-                        temporaryOverride = false
                     },
                     callItTheDeckNotTheDrawPile = true,
                 },
@@ -168,7 +167,7 @@ public static class EventsPatchesBootDownside
                 (CardAction)new ARemoveCard(),
                 (CardAction)new AAddCard
                 {
-                    card = new CorruptedCore()
+                    card = new NewBootOptionsEmptyVessel()
                     {
                     },
                     callItTheDeckNotTheDrawPile = true,
