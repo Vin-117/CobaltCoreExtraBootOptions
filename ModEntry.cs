@@ -29,10 +29,8 @@ public sealed class ModEntry : SimpleMod {
 	internal ILocaleBoundNonNullLocalizationProvider<IReadOnlyList<string>> Localizations { get; }
 
     private static List<Type> NewBootOptionsEventArtifacts = [
-        //typeof(NewBootOptionsFTLCasings),
         typeof(NewBootOptionsShieldShunt),
-        typeof(NewBootOptionsRemoveFirstArtifact),
-        typeof(NewBootOptionsRemoveAllArtifacts)
+        typeof(NewBootOptionsRemoveFirstArtifact)
     ];
 
     public static List<Type> NewBootOptionsRandomRemoveBlacklist = [
@@ -49,7 +47,6 @@ public sealed class ModEntry : SimpleMod {
     ];
 
     private static List<Type> NewBootOptionsCards = [
-		//typeof (NewBootOptionsFTLCasingCard),
         typeof(NewBootOptionsSystemFailure),
         typeof(NewBootOptionsEmptyVessel),
         typeof(NewBootOptionsMisfire)
@@ -80,16 +77,6 @@ public sealed class ModEntry : SimpleMod {
 
         Settings = helper.Storage.LoadJson<Settings>(helper.Storage.GetMainStorageFile("json"));
 
-        //helper.ModRegistry.AwaitApi<IMoreDifficultiesApi>("TheJazMaster.MoreDifficulties", api => MoreDifficultiesApi = api);
-
-        /*helper.ModRegistry.AwaitApi<IMoreDifficultiesApi>("TheJazMaster.MoreDifficulties", api =>
-        {
-            NewBootOptionsRandomRemoveBlacklist.Add(api.BasicOffencesCardType);
-            NewBootOptionsRandomRemoveBlacklist.Add(api.BasicDefencesCardType);
-            NewBootOptionsRandomRemoveBlacklist.Add(api.BasicManeuversCardType);
-            NewBootOptionsRandomRemoveBlacklist.Add(api.BasicBroadcastCardType);
-        });*/
-
         helper.ModRegistry.AwaitApi<IMoreDifficultiesApi>("TheJazMaster.MoreDifficulties", api =>
         {
             NewBootOptionsRandomRemoveBlacklist.Add(api.BasicOffencesCardType);
@@ -98,12 +85,6 @@ public sealed class ModEntry : SimpleMod {
             NewBootOptionsRandomRemoveBlacklist.Add(api.BasicBroadcastCardType);
             MoreDifficultiesApi = api;
         });
-
-        helper.ModRegistry.AwaitApi<ICustomRunOptionsApi>("Shockah.CustomRunOptions", api => api.RegisterBootSequenceUpside(
-            "gainBossArtifactForNodes",
-            () => "Gain a boss artifact, remove <c=artifact>artifact</c> node rewards",
-            choice => choice is BootUpsideRemoveAllArtifactsForBossArtifact
-        ));
 
         helper.ModRegistry.AwaitApi<ICustomRunOptionsApi>("Shockah.CustomRunOptions", api => api.RegisterBootSequenceUpside(
             "removeAndUpgrade",
@@ -116,12 +97,6 @@ public sealed class ModEntry : SimpleMod {
             () => "Upgrade 3 random cards",
             choice => choice is BootUpsideRandomUpgrades
         ));
-
-        /*helper.ModRegistry.AwaitApi<ICustomRunOptionsApi>("Shockah.CustomRunOptions", api => api.RegisterBootSequenceUpside(
-            "gainBasics",
-            () => "Gain 1 of 5 basic cards",
-            choice => choice is BootUpsideGainBasics
-        ));*/
 
         helper.ModRegistry.AwaitApi<ICustomRunOptionsApi>("Shockah.CustomRunOptions", api => api.RegisterBootSequenceUpside(
             "gainUpgradedCommon",
@@ -173,7 +148,7 @@ public sealed class ModEntry : SimpleMod {
 
         helper.ModRegistry.AwaitApi<ICustomRunOptionsApi>("Shockah.CustomRunOptions", api => api.RegisterBootSequenceDownside(
             "RemoveFirstArtifact",
-            () => "<c=downside>The first <c=artifact>artifact</c> map node is empty</c>",
+            () => "<c=downside>Gain a <c=artifact>ARTIFACT TAX</c></c>",
             choice => choice is BootdownsideRemoveFirstArtifact
         ));
 

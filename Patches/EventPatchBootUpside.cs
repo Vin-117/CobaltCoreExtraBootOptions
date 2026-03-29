@@ -103,26 +103,6 @@ public static class EventsPatchesBootUpside
             ]
         });
 
-        /*choices.Add(new BootUpsideGainBasics
-        {
-            label = ModEntry.Instance.Localizations.Localize(FullLocKey(locKey, "gainBasics")),
-            key = key,
-            actions =
-            [
-                new ASpecificCardOffering
-                {
-                    Destination = CardDestination.Deck,
-                    Cards = [
-                        new BasicShieldColorless{ },
-                        new DodgeColorless{ },
-                        new CannonColorless{ },
-                        new BasicSpacer{ },
-                        new DroneshiftColorless{ }
-                    ],
-                },
-            ]
-        });*/
-
         choices.Add(new BootUpsideUpgradedCommonCard
         {
             label = ModEntry.Instance.Localizations.Localize(FullLocKey(locKey, "gainUpgradedCommon")),
@@ -152,30 +132,6 @@ public static class EventsPatchesBootUpside
                 }
             ]
         });
-
-        if (!((from r in state.EnumerateAllArtifacts()
-             where r is NewBootOptionsRemoveFirstArtifact
-               select r).ToList().Count > 0)) 
-        {
-            choices.Add(new BootUpsideRemoveAllArtifactsForBossArtifact
-            {
-                label = ModEntry.Instance.Localizations.Localize(FullLocKey(locKey, "gainBossArtifactForNodes")),
-                key = key,
-                actions =
-                [
-                    (CardAction)new AAddArtifact
-                    {
-                        artifact = new NewBootOptionsRemoveAllArtifacts()
-                    },
-                    (CardAction)new AArtifactOffering
-                    {
-                        amount = 1,
-                        canSkip = false,
-                        limitPools = new List<ArtifactPool> { ArtifactPool.Boss }
-                    }
-                ]
-            });
-        }
 
     }
 

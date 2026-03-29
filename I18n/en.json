@@ -5,7 +5,6 @@
             "chooseTonsOfCards" : "Gain 1 of 5 cards",
             "gainBasics": "Gain 1 of 5 basic cards",
             "gainTrueRandomUpgrades" : "Upgrade 3 random cards",
-            "gainBossArtifactForNodes" : "Gain a boss arifact, remove <c=artifact>artifact</c> node rewards",
             "gainUpgradedCommon": "Gain 1 of 3 upgraded common cards",
             "LoseTwoHull": "<c=downside>Lose 2</c> <c=hull>hull</c>",
             "GainSafetyOverride" : "<c=downside>Gain 1 <c=trash>Misfire</c></c>",
@@ -14,7 +13,7 @@
             "GainFTLCanister" : "<c=downside>Gain 1 <c=trash>FTL Canister</c> every zone</c>",
             "GainShieldShunt" : "<c=downside>Replace <c=artifact>WARP PREP</c> with <c=artifact>BASIC WARP</c></c>",
             "RemoveAddCorrupted" : "<c=downside>Remove a card, then gain 1</c> <c=trash>Null</c></c>",
-            "RemoveFirstArtifact" :  "<c=downside>The first <c=artifact>artifact</c> node is empty</c>",
+            "RemoveFirstArtifact" :  "<c=downside>Gain a <c=artifact>ARTIFACT TAX</c></c>",
             "removeAndUpgrade" : "Remove a card, then upgrade a random card"
         }
     },
@@ -25,11 +24,7 @@
         },
         "NewBootOptionsRemoveFirstArtifact" : {
             "name" : "ARTIFACT TAX",
-            "desc" : "<c=downside>The first <c=artifact>Artifact</c> map node gives nothing.</c>"
-        },
-        "NewBootOptionsRemoveAllArtifacts" : {
-            "name" : "TOTAL ARTIFACT LOSS",
-            "desc" : "<c=downside>ALL <c=artifact>Artifact</c> map nodes give nothing.</c>"
+            "desc" : "<c=downside>The first <c=artifact>artifact</c> map node gives nothing.</c>"
         },
     },
     "card" : {
